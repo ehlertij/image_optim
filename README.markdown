@@ -22,6 +22,7 @@ Command line tool and ruby interface to optimize (lossless compress, optionally 
 * [pngout](http://www.advsys.net/ken/util/pngout.htm)
 * [pngquant](http://pngquant.org/)
 * [svgo](https://github.com/svg/svgo)
+* [webp](https://developers.google.com/speed/webp/)
 
 Based on [ImageOptim.app](http://imageoptim.com/).
 
@@ -109,7 +110,7 @@ Pack doesn't include `pngout` and `svgo` binaries, their installation instructio
 ### Linux - Debian/Ubuntu
 
 ```bash
-sudo apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush pngquant
+sudo apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush pngquant webp
 ```
 
 If you get an old version of `pngquant`, please check how to install up-to-date version or compile from source at [http://pngquant.org/](http://pngquant.org/).
@@ -342,6 +343,10 @@ Worker has no options
 ### svgo:
 * `:disable_plugins` — List of plugins to disable *(defaults to `[]`)*
 * `:enable_plugins` — List of plugins to enable *(defaults to `[]`)*
+
+### cwebp:
+* `:compression` — Compression factor for RGB channels between 0 and 100 *(defaults to `75`)*
+* `:lossless` — Encode the image without any loss *(defaults to `true`)*
 
 <!---</worker-options>-->
 
